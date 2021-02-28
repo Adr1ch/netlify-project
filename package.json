@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "netlify": "npx netlify-cms-proxy-server",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
