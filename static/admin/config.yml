@@ -15,3 +15,10 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Start', name: 'start', widget: 'string' }
+  
+  - name: 'translations'
+    label: 'Translations'
+    folder: 'content/translations'
+    create: true
+    fields:
+      - { label: 'translation', name: 'translation', widget: 'string' }
