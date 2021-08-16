@@ -1,5 +1,0 @@
-:root {
-  @each $key, $value in $theme {
-    #{'--' + unquote($key)}: $value;
-  }
-}

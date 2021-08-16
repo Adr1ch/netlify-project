@@ -1,3 +1,0 @@
----
-translation: Galaxy carp
----

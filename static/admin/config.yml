@@ -8,17 +8,39 @@ media_folder: static/img
 public_folder: img
 
 collections:
-  - name: 'careers'
-    label: 'Careers'
-    folder: 'content/careers'
-    create: true
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Start', name: 'start', widget: 'string' }
-  
   - name: 'translations'
     label: 'Translations'
     folder: 'content/translations'
+    format: 'frontmatter'
     create: true
+    editor:
+      preview: false
     fields:
       - { label: 'translation', name: 'translation', widget: 'string' }
+
+  - name: 'posts'
+    label: 'Posts'
+    folder: 'content/posts'
+    format: 'frontmatter'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - label: "Section"
+      name: "Section"
+      widget: object
+      collapsed: true
+      editor:
+        preview: false
+      fields:
+        - { label: "Section title", name: "section_title", widget: string }
+        - { label: "Section description", name: "section_desc", widget: text }
+        - { label: "Planet image", name: "planet_image", widget: image }
+        - { label: "Button modal text", name: "btn_modal", widget: string }
+        - { label: "Modal title", name: "modal_title", widget: string }
+        - { label: "Modal content", name: "modal_content", widget: markdown }

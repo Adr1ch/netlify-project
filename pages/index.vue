@@ -1,22 +1,26 @@
 <template>
-  <div>
-    <h1>Сайт про рибалку</h1>
-    <h2>Як ловити карася?</h2>
-    <h2>Як ловити коропа?</h2>
-    <h2>Як ловити рибу?</h2>
-    <pre>{{ data1 }}</pre>
-    <pre>{{ data2 }}</pre>
+  <div class="box-border container mx-auto xl">
+    <!-- <pre>{{ translations }}</pre> -->
+    <pre>{{ posts }}</pre>
+    <ul class="flex space-x-5">
+      <li v-for="(post, index) in posts" :key="index" class="w-1/2 p-3 ...">
+        <h3>{{ post.title }}</h3>
+        <span>{{ post.description }}</span>
+        <span>{{ post.date }}</span>
+        <p>{{ post.body.children[0].children[0].value }}</p>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
   async asyncData({ $content }) {
-    const [data1, data2] = await Promise.all([
-      $content('careers').fetch(),
+    const [translations, posts] = await Promise.all([
       $content('translations').fetch(),
+      $content('posts').fetch(),
     ])
-    return { data1, data2 }
+    return { translations, posts }
   },
 }
 </script>
