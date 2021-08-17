@@ -11,7 +11,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  // css: ['@/assets/scss/main.scss'],
+  css: ['@/assets/tailwind.css'],
 
   // styleResources: {
   //   scss: ['./assets/scss/global.scss'],

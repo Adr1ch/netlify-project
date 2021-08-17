@@ -1,9 +1,11 @@
 <template>
-  <div class="box-border container mx-auto xl">
-    <!-- <pre>{{ translations }}</pre> -->
-    <pre>{{ posts }}</pre>
-    <ul class="flex space-x-5">
-      <li v-for="(post, index) in posts" :key="index" class="w-1/2 p-3 ...">
+  <div class="box-border container mx-auto">
+    <ul class="flex space-x-15 font-main">
+      <li
+        v-for="(post, index) in posts"
+        :key="index"
+        class="text-black bg-grey-100 rounded-5 p-15 w-1/2 p-3 ..."
+      >
         <h3>{{ post.title }}</h3>
         <span>{{ post.description }}</span>
         <span>{{ post.date }}</span>
