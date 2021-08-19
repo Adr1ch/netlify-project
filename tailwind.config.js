@@ -49,9 +49,15 @@ module.exports = {
     },
     colors: {
       white: '#ffffff',
+      black: '#000000',
+      // 50, 100, ... 900
       grey: colors.coolGray,
       green: colors.emerald,
-      black: colors.black,
+      red: colors.red,
+      yellow: colors.amber,
+      blue: colors.blue,
+      indigo: colors.indigo,
+      pink: colors.pink,
     },
     backgroundColor: (theme) => ({
       ...theme('colors'),
@@ -64,6 +70,10 @@ module.exports = {
       25: '25px',
       30: '30px',
       35: '35px',
+      200: '200px',
+      300: '300px',
+      350: '350px',
+      400: '400px',
     },
     fontFamily: {
       main: ['"Quicksand"', 'sans-serif'],
@@ -74,12 +84,24 @@ module.exports = {
     padding: (theme) => ({
       ...theme('spacing'),
     }),
+    margin: (theme) => ({
+      ...theme('spacing'),
+    }),
     borderRadius: (theme) => ({
       ...theme('spacing'),
     }),
-    width: {
+    width: (theme) => ({
+      ...theme('spacing'),
       'w-full': '100%',
       'w-screen': '100vw',
+    }),
+    height: (theme) => ({
+      ...theme('spacing'),
+      full: '100%',
+      screen: '100vh',
+    }),
+    boxShadow: {
+      'menu-bs': '0 4px 4px rgb(0 0 0 / 25%)',
     },
   },
   variants: {
